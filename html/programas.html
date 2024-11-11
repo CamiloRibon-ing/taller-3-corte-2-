@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Programas Académicos</title>
+    <link rel="icon" href="../recursos/minilogo-cecar.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i><span class="nav-item">Vista General</span></a></li>
+            <li><a href="../html/estudiantes.html"><i class="fas fa-user-graduate"></i><span class="nav-item">Gestión de Estudiantes</span></a></li>
+            <li><a href="../html/programas.html"><i class="fas fa-book"></i><span class="nav-item">Gestión de Programas Académicos</span></a></li>
+            <li><a href="../html/matriculas.html"><i class="fas fa-file-alt"></i><span class="nav-item">Gestión de Matrículas</span></a></li>
+            <li class="logout"><a href="#"><i class="fas fa-sign-out-alt"></i><span class="nav-item">Cerrar Sesión</span></a></li>
+        </ul>
+    </nav>
+    <!-- Contenido de la Gestión de Programas Académicos -->
+
+    <section>
+
+        <h2>Gestion de Programas Academicos</h2>
+        <form id="form-programas">
+
+            <label for="codigo-programa">Codigo del Programa</label>
+            <input type="text" id="codigo-programa" required pattern="[A-Za-z0-9]+">
+
+            <label for="nombre-programa">Nombre del Programa</label>
+            <input type="text" id="nombre-programa" required >
+
+            <label for="duracion"> Duracion en Semestres</label>
+            <input type="number" id="duracion" required min="1" max="10 " >
+
+            <label for="modalidad">Modalidad</label>
+
+            <select id="modalidad" required>
+                <option value="Presencial">Presencial</option>
+                <option value="virtual">Virtual</option>
+                <option value="semipresencial">Semipresencial</option>
+
+                
+            </select>
+
+            <label for="fecha-inicio">Fecha de Inicio</label>
+            <input type="date" id="fecha-inicio" required >
+
+            <button type="submit">Guardar Programa</button>
+
+
+
+        </form>
+    </section>
+    <script src="/js/programas.js"></script>
+</body>
+</html>
